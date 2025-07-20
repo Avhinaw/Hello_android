@@ -5,7 +5,7 @@ import { useModal } from '../context/ModalContext'
 function Header() {
   const {toggleModal} = useModal();
   return (
-    <div className='w-screen h-16 bg-slate-50 border-b flex justify-between items-center px-10 border-b-[#e7edf4]'>
+    <div className='w-screen h-16 bg-slate-50 border-b flex justify-between items-center px-10 border-b-[#e7edf4] dark:bg-gray-700 dark:text-white'>
         <div className='flex items-center gap-8'>
         <svg className='h-10' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -13,10 +13,10 @@ function Header() {
                   fill="currentColor"
                 ></path>
               </svg>
-              <h1 className='text-[#0d141c] font-bold leading-tight tracking-[-0.015em] text-lg'>Ai Chat</h1>
+              <h1 className='text-[#0d141c] font-bold leading-tight tracking-[-0.015em] text-lg dark:text-white'>Ai Chat</h1>
         </div>
         <div className='flex gap-8 items-center'>
-        <button onClick={toggleModal}
+        <button onClick={(toggleModal)}
               className="flex w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#e7edf4] text-[#0d141c] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
             >
               <div className="text-[#0d141c]" data-icon="Gear" data-size="20px" data-weight="regular" >

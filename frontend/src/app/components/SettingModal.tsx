@@ -1,18 +1,30 @@
-import React from 'react'
+'use client'
 import { useModal } from '../context/ModalContext';
-
+import { useTheme } from '../context/ThemeContext';
 export default function SettingModal() {
-    const { showSettingsModal } = useModal();
-    if (!showSettingsModal) return null;
+  const {toggleTheme, theme} = useTheme();
+  const { showSettingsModal } = useModal();
+  if (!showSettingsModal) return null;
   return (
-    <div className='backdrop-blur-lg bg-[rgba(85,83,63,0.3)] p-6 text-whitebg-transparent shadow-lg w-[25vw] h-[38vh] z-5 absolute top-20 left-80 rounded-xl transform transition-all duration-1000 ease-in-out space-y-4'>
+    <div className='backdrop-blur-lg bg-[rgba(85,83,63,0.3)] p-6 text-whitebg-transparent shadow-lg w-screen h-screen z-5 absolute rounded-xl transform transition-all duration-500 ease-in-out space-y-4 dark:text-white'>
+    <div className='backdrop-blur-lg bg-[rgba(85,83,63,0.3)] p-6 text-whitebg-transparent shadow-lg w-[25vw] h-[38vh] z-5 absolute bottom-70 left-130 rounded-xl transform transition-all duration-1000 ease-in-out space-y-4 dark:text-white'>
         <h2 className='text-lg font-bold'>Settings</h2>
         <div>
         <h4 className='font-semibold'>Theme</h4>
         <p className='text-sm'>Choose between a light and dark theme</p>
         <div className='space-x-3 mt-1'>
-            <button className='bg-white cursor-pointer w-7 h-7 rounded-lg'></button>
-            <button className='bg-black cursor-pointer w-7 h-7 rounded-lg'></button>
+        <button
+    className={`w-8 h-8 rounded-lg border-2 ${
+      theme === 'light' ? 'border-blue-500' : 'border-transparent'
+    } bg-white`}
+    onClick={() => toggleTheme('light')}
+  />
+  <button
+    className={`w-8 h-8 rounded-lg border-2 ${
+      theme === 'dark' ? 'border-blue-500' : 'border-transparent'
+    } bg-black`}
+    onClick={() => toggleTheme('dark')}
+  />
         </div>
         </div>
         <div>
@@ -24,5 +36,6 @@ export default function SettingModal() {
         </div>
         </div>
     </div>
+</div>
   )
 }

@@ -6,7 +6,7 @@ import SettingModal from './components/SettingModal'
 
 function page() {
   return (
-    <div className='flex h-[calc(100vh-7rem)] space-x-5 overflow-hidden w-screen mt-12 relative'>
+    <div className='flex h-[91.5vh] overflow-hidden w-screen relative dark:bg-gray-900'>
       <ChatInterface />
       <SettingModal />
       <ChatInfo />
