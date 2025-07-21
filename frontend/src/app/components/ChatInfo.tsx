@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import RecentChatButton from '../ui/RecentChatButton'
-import { RiSendPlaneLine } from 'react-icons/ri'
 import { BiMessageSquareEdit } from 'react-icons/bi';
-import { sendMsgToBackend } from '../api/chat';
-import { useChat } from '../context/ChatContext';
 import ChatInput from './ChatInput';
 
 export default function ChatInfo() {

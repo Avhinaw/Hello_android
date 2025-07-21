@@ -17,7 +17,7 @@ export default function ChatInput() {
       const reply = await sendMsgToBackend(question);
       addMessage({ role: 'ai', text: reply });
     } catch (err) {
-      addMessage({ role: 'ai', text: 'Something went wrong' });
+      addMessage({ role: 'ai', text: `Something went wrong ${err}`});
     }
   };
 
