@@ -1,5 +1,5 @@
 export async function sendMsgToBackend(prompt: string) {
-    const response = await fetch('http://localhost:5000/api/chat', {
+    const response = await fetch('https://hello-android.onrender.com/api/chat', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
