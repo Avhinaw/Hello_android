@@ -9,7 +9,9 @@ function page() {
     <div className='flex h-[91.5vh] overflow-hidden w-screen relative dark:bg-gray-900'>
       <ChatInterface />
       <SettingModal />
+      <div className='lg:block hidden'>
       <ChatInfo />
+      </div>
     </div>
   )
 }
