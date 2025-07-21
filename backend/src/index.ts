@@ -7,7 +7,7 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 const app = express();
 app.use(cors ({
-    origin: 'http://localhost:3000',
+    origin: ['https://helloandroid.netlify.app/', 'http://localhost:3000'],
     methods: ['GET', 'POST'],
     credentials: true
 }));
