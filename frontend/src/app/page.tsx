@@ -3,10 +3,10 @@ import React from 'react'
 import ChatInterface from './components/ChatInterface'
 import ChatInfo from './components/ChatInfo'
 import SettingModal from './components/SettingModal'
-import { useSideBar } from './context/SidebarContext'
+import { useSidebar } from './context/SidebarContext'
 
-function page() {
-  const {isSidebarOpen, closeSidebar} = useSideBar();
+function Page() {
+  const {isSidebarOpen, closeSidebar} = useSidebar();
   return (
     <div className='flex h-[91.5vh] overflow-hidden w-screen relative dark:bg-gray-900'>
       <ChatInterface />
@@ -21,4 +21,4 @@ function page() {
   )
 }
 
-export default page;
+export default Page;

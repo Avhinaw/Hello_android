@@ -3,11 +3,11 @@ import React from 'react'
 import { useModal } from '../context/ModalContext'
 import { AiOutlineAlignRight } from 'react-icons/ai';
 import { IoSettingsOutline } from 'react-icons/io5';
-import { useSideBar } from '../context/SidebarContext';
+import { useSidebar } from '../context/SidebarContext';
 
 function Header() {
   const {toggleModal} = useModal();
-  const {toggleSidebar} = useSideBar();
+  const {toggleSidebar} = useSidebar();
   return (
     <div className='w-screen h-16 bg-slate-50 border-b flex justify-between items-center px-3 border-b-[#e7edf4] dark:bg-gray-700 lg:px-10 dark:text-white'>
         <div className='flex items-center gap-2 lg:gap-8'>
