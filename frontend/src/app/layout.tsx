@@ -5,6 +5,7 @@ import Header from "./custom/Header";
 import { ModalProvider } from "./context/ModalContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import { ChatProvider } from "./context/ChatContext";
+import { SidebarProvider } from "./context/SidebarContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +33,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
+        <SidebarProvider> 
         <ModalProvider>
         <ChatProvider>
         <Header/>
         {children}
         </ChatProvider>
         </ModalProvider>
+        </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>

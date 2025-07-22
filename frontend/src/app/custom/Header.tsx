@@ -3,9 +3,11 @@ import React from 'react'
 import { useModal } from '../context/ModalContext'
 import { AiOutlineAlignRight } from 'react-icons/ai';
 import { IoSettingsOutline } from 'react-icons/io5';
+import { useSideBar } from '../context/SidebarContext';
 
 function Header() {
   const {toggleModal} = useModal();
+  const {toggleSidebar} = useSideBar();
   return (
     <div className='w-screen h-16 bg-slate-50 border-b flex justify-between items-center px-3 border-b-[#e7edf4] dark:bg-gray-700 lg:px-10 dark:text-white'>
         <div className='flex items-center gap-2 lg:gap-8'>
@@ -29,7 +31,7 @@ function Header() {
             </button>
               <div className='bg-blue-500 rounded-full w-10 h-10'></div>
           </div>
-              <AiOutlineAlignRight className='text-xl lg:hidden cursor-pointer' />
+              <AiOutlineAlignRight className='text-2xl lg:hidden cursor-pointer' onClick={toggleSidebar} aria-label='Toggle Sidebar'/>
         </div>
     </div>
   )
