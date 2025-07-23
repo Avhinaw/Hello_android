@@ -8,7 +8,7 @@ function ChatInterface() {
   const { messages } = useChat();
 
   return (
-    <div className="relative w-screen lg:w-[70vw] h-[87vh] lg:h-[100vw] flex flex-col dark:bg-gray-800">
+    <div className="relative w-screen lg:w-[70vw] h-[87vh] lg:h-full flex flex-col dark:bg-gray-800">
       
       {/* Scrollable messages */}
       <div className="flex-1 overflow-y-auto px-2 lg:px-4 pb-24 pt-8 flex flex-col gap-8">
